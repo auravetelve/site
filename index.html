@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aura &amp; Telve: Mistik Fal ve Yorum Uygulaması</title>
+<meta name="description" content="Aura &amp; Telve ile kahve falı, el falı, tarot, astroloji, rüya tabiri ve daha fazlası. Eğlence amaçlı, yapay zekâ destekli mistik yorumlar.">
+<style>
+  :root {
+    --bg1: #0f0a1f;
+    --bg2: #241545;
+    --card: rgba(255, 255, 255, .06);
+    --line: rgba(200, 170, 255, .25);
+    --text: #f1ecff;
+    --muted: #b9afd6;
+    --gold: #e8c56b;
+    --accent: #b794f6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: radial-gradient(ellipse at top, var(--bg2), var(--bg1) 70%) fixed;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  header { text-align: center; padding: 64px 0 32px; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    letter-spacing: .08em;
+    margin: .3em 0 .2em;
+    background: linear-gradient(90deg, var(--gold), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tagline { color: var(--muted); font-size: 1.1rem; max-width: 560px; margin: 0 auto; }
+  h2 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 48px 0 20px;
+    letter-spacing: .04em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px;
+    border-top: 3px solid var(--gold);
+  }
+  .card h3 { margin: .4em 0 .2em; font-size: 1.05rem; color: var(--text); }
+  .card p { margin: 0; color: var(--muted); font-size: .93rem; }
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .steps li {
+    counter-increment: s;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 16px 14px 56px;
+    position: relative;
+    color: var(--muted);
+  }
+  .steps li::before {
+    content: counter(s);
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--accent));
+    color: #1a1033;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+  }
+  .steps strong { color: var(--text); }
+  .notice {
+    margin-top: 40px;
+    border-left: 4px solid var(--accent);
+    background: rgba(183,148,246,.1);
+    padding: 12px 16px;
+    border-radius: 0 12px 12px 0;
+    color: var(--muted);
+    font-size: .93rem;
+  }
+  .links { text-align: center; margin: 36px 0 0; }
+  .links a {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--text);
+    text-decoration: none;
+    background: var(--card);
+  }
+  .links a:hover { border-color: var(--gold); color: var(--gold); }
+  footer { text-align: center; color: var(--muted); font-size: .88rem; padding: 40px 0 56px; }
+  footer a { color: var(--gold); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    
+    <h1>Aura &amp; Telve</h1>
+    <p class="tagline">Fincanın, avucunun, kartların ve yıldızların sana ne söylediğini keşfet. Mistik yorumlar, cebinde.</p>
+  </header>
+
+  <h2>Neler Var?</h2>
+  <div class="grid">
+    <div class="card"><h3>Kahve Falı</h3><p>Fincan ve telve fotoğraflarınla kadim bir okuma.</p></div>
+    <div class="card"><h3>El Falı</h3><p>Avuç içi fotoğrafınla kader çizgileri yorumu.</p></div>
+    <div class="card"><h3>Tarot</h3><p>Kartların sembolizmiyle rehberlik.</p></div>
+    <div class="card"><h3>Astroloji</h3><p>Doğum haritası, burç yorumları ve uyum analizi.</p></div>
+    <div class="card"><h3>Rüya Tabiri</h3><p>Gördüğün rüyanın sembollerini birlikte çözelim.</p></div>
+    <div class="card"><h3>Kristal Küre</h3><p>Aklındaki soruya odaklan, anlık cevabını al.</p></div>
+    <div class="card"><h3>Kader Portreleri</h3><p>Geçmişteki ve gelecekteki sana ait hayali portreler.</p></div>
+  </div>
+
+  <h2>Nasıl Çalışır?</h2>
+  <ol class="steps">
+    <li><strong>Falcını seç.</strong> Her falcının kendine özgü bir üslubu var.</li>
+    <li><strong>Sorunu ya da fotoğrafını paylaş.</strong> Yalnızca fal yorumu için kullanılır.</li>
+    <li><strong>Yorumunu oku.</strong> Yapay zekâ destekli yorum kısa sürede hazır olur ve Fallarım'da saklanır.</li>
+  </ol>
+
+  <p class="notice">Aura &amp; Telve <strong>eğlence amaçlıdır</strong>. Yorumlar tıbbi, hukuki, finansal ya da kesin gelecek tahmini niteliği taşımaz; önemli kararlarında bunlara dayanma.</p>
+
+  <nav class="links">
+    <a href="hesap-silme.html">Hesap ve Veri Silme</a>
+    <a href="mailto:auravetelve@gmail.com" class="mail-link">İletişim: E-posta Gönder</a>
+  </nav>
+
+  <footer id="iletisim">
+    Destek ve sorular için: <a href="mailto:auravetelve@gmail.com" class="mail-link">auravetelve@gmail.com</a><br>
+    © Aura &amp; Telve
+  </footer>
+</div>
+<script>
+  (function () {
+    // Telefonda mailto e-posta uygulamasını açar. Bilgisayarda varsayılan bir
+    // e-posta uygulaması olmayabilir; orada Gmail'de yeni mesaj penceresi açılır.
+    var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) return;
+    var url = 'https://mail.google.com/mail/?view=cm&fs=1&to=auravetelve%40gmail.com' +
+      '&su=' + encodeURIComponent('Aura & Telve destek');
+    var links = document.querySelectorAll('.mail-link');
+    for (var i = 0; i < links.length; i++) {
+      links[i].href = url;
+      links[i].target = '_blank';
+      links[i].rel = 'noopener';
+    }
+  })();
+</script>
+</body>
+</html>
