@@ -141,29 +141,13 @@
 
   <nav class="links">
     <a href="hesap-silme.html">Hesap ve Veri Silme</a>
-    <a href="mailto:auravetelve@gmail.com" class="mail-link">İletişim: E-posta Gönder</a>
+    <a href="mailto:auravetelve@gmail.com?subject=Aura%20%26%20Telve%20destek">İletişim: E-posta Gönder</a>
   </nav>
 
   <footer id="iletisim">
-    Destek ve sorular için: <a href="mailto:auravetelve@gmail.com" class="mail-link">auravetelve@gmail.com</a><br>
+    Destek ve sorular için: <a href="mailto:auravetelve@gmail.com">auravetelve@gmail.com</a><br>
     © Aura &amp; Telve
   </footer>
 </div>
-<script>
-  (function () {
-    // Telefonda mailto e-posta uygulamasını açar. Bilgisayarda varsayılan bir
-    // e-posta uygulaması olmayabilir; orada Gmail'de yeni mesaj penceresi açılır.
-    var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (isMobile) return;
-    var url = 'https://mail.google.com/mail/?view=cm&fs=1&to=auravetelve%40gmail.com' +
-      '&su=' + encodeURIComponent('Aura & Telve destek');
-    var links = document.querySelectorAll('.mail-link');
-    for (var i = 0; i < links.length; i++) {
-      links[i].href = url;
-      links[i].target = '_blank';
-      links[i].rel = 'noopener';
-    }
-  })();
-</script>
 </body>
 </html>
