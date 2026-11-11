@@ -142,13 +142,28 @@
   <nav class="links">
     <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
     <a href="hesap-silme.html">Hesap ve Veri Silme</a>
-    <a href="mailto:auravetelve@gmail.com?subject=Aura%20%26%20Telve%20destek">İletişim: E-posta Gönder</a>
+    <a class="mail-link" href="mailto:auravetelve@gmail.com?subject=Aura%20%26%20Telve%20destek">İletişim: E-posta Gönder</a>
   </nav>
 
   <footer id="iletisim">
-    Destek ve sorular için: <a href="mailto:auravetelve@gmail.com">auravetelve@gmail.com</a><br>
+    Destek ve sorular için: <a class="mail-link" href="mailto:auravetelve@gmail.com?subject=Aura%20%26%20Telve%20destek">auravetelve@gmail.com</a><br>
     © Aura &amp; Telve
   </footer>
 </div>
+<script>
+  // Bilgisayarda varsayılan e-posta uygulaması yoksa mailto bağlantısı hiçbir şey yapmaz;
+  // bu yüzden masaüstünde Gmail yazma sayfası yeni sekmede açılır. Telefonda mailto kalır.
+  (function () {
+    var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) return;
+    var url = "https://mail.google.com/mail/?view=cm&fs=1&to=auravetelve%40gmail.com&su=Aura%20%26%20Telve%20destek";
+    document.querySelectorAll("a.mail-link").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.open(url, "_blank", "noopener");
+      });
+    });
+  })();
+</script>
 </body>
 </html>
